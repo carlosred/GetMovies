@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:provider/provider.dart';
 import 'package:prueba/Models/Movies.dart';
 
 //CLASE PROVIDER DE TODA LA APP

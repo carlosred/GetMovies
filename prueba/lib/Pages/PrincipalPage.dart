@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:prueba/Models/Movies.dart';
-import 'package:prueba/ProviderModels/MoviesModel.dart';
 
+import 'package:prueba/ProviderModels/MoviesModel.dart';
+import 'package:animate_do/animate_do.dart';
 import 'package:prueba/UisWidgets/Widgets.dart';
 
 import 'package:provider/provider.dart';
@@ -66,19 +66,25 @@ class HomePage_movies extends StatelessWidget {
               left: width * 0.15,
               right: width * 0.15,
               top: height * 0.07,
-              child: PrincipalMessage(width: width, height: height)),
+              child: SlideInUp(
+                  delay: Duration(milliseconds: 500),
+                  child: PrincipalMessage(width: width, height: height))),
           Positioned(
               top: height * 0.2,
               left: width * 0.1,
               right: width * 0.1,
-              child: SearchBox()),
+              child: SlideInLeft(
+                  delay: Duration(milliseconds: 700), child: SearchBox())),
           Positioned(
               bottom: 0,
-              child: MoviesContainer(
-                  moviesapp: Provider.of<ModelMovies>(context, listen: false)
-                      .getMoviesApp,
-                  width: width,
-                  height: height))
+              child: SlideInDown(
+                delay: Duration(milliseconds: 900),
+                child: MoviesContainer(
+                    moviesapp: Provider.of<ModelMovies>(context, listen: false)
+                        .getMoviesApp,
+                    width: width,
+                    height: height),
+              ))
         ],
       ),
     );

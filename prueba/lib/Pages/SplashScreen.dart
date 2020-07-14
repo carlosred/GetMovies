@@ -7,8 +7,6 @@ import 'package:provider/provider.dart';
 import 'package:prueba/Models/Movies.dart';
 import 'package:prueba/Pages/PrincipalPage.dart';
 import 'package:prueba/ProviderModels/MoviesModel.dart';
-
-import 'package:progress_indicators/progress_indicators.dart';
 import 'package:prueba/UisWidgets/Widgets.dart';
 
 // PANTALLA INICIAL DONDE SE MUESTRA EL LOGO DE LA APP , MIENTRAS ESTA CARGA LOS DATOS INICIALES , QUE SON LAS PELICULAS
