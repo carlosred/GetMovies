@@ -280,20 +280,23 @@ class _DetailScreenState extends State<DetailScreen> {
                 top: widget.height * 0.62,
                 child: Container(
                   width: widget.width,
-                  height: widget.height * 0.2,
-                  child: Center(
-                    child: Padding(
-                      padding: EdgeInsets.only(
-                          left: widget.width * 0.05,
-                          right: widget.width * 0.05),
-                      child: AutoSizeText(
-                        widget.widget.movie.overview,
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                            color: Colors.white.withOpacity(0.8),
-                            fontSize: widget.width * 0.04),
+                  height: widget.height * 0.23,
+                  child: ListView(
+                    physics: BouncingScrollPhysics(),
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(
+                            left: widget.width * 0.05,
+                            right: widget.width * 0.05),
+                        child: AutoSizeText(
+                          widget.widget.movie.overview,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Colors.white.withOpacity(0.8),
+                              fontSize: widget.width * 0.06),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
                 )),
             Positioned(
